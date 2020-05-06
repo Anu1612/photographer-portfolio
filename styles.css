@@ -1,0 +1,194 @@
+.profile-head {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 28px;
+  background-image: url(./assest/background.svg);
+}
+.profile-head .content {
+  width: 120px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-head .content .profile-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+}
+.profile-head .content .location-container {
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.profile-head .content .location-container div {
+  font-family: "Roboto", sans-serif;
+}
+.profile-head .content .name-container {
+  text-align: center;
+}
+.profile-head .content .name-container .name {
+  font-size: 24px;
+  font-family: "Libre Franklin", sans-serif;
+}
+.profile-head .content .name-container .desc {
+  margin-top: -2px;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  display: none;
+}
+.profile-head .content .social-container {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer {
+  display: block;
+  background: rgba(0, 0, 0, 0) linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 100%) repeat scroll 0% 0%;
+  padding-bottom: 4px;
+}
+
+.footer-container {
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  width: 90%;
+  margin-left: 5%;
+}
+.footer-container .about-text {
+  font-family: "Libre Franklin", sans-serif;
+  line-height: 1.5em;
+}
+.footer-container .about-text p {
+  font-size: 16px;
+}
+.footer-container .toggle-container {
+  font-size: 16px;
+  width: 100%;
+  font-family: "Libre Franklin", sans-serif;
+}
+.footer-container .toggle-container h5 {
+  margin-bottom: 5px;
+}
+.footer-container .toggle-container p {
+  font-size: 14px;
+  align-self: flex-end;
+}
+.footer-container .toggle-container div {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  margin-left: 32.5%;
+}
+
+body {
+  margin: 0px;
+}
+
+.profile-body {
+  width: 100%;
+  inset: 0px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.profile-body .portfolio-grid {
+  width: 90%;
+  display: grid;
+  max-width: 1366px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin-top: -2.5em;
+  align-items: flex-start;
+}
+.profile-body .portfolio-grid .item {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out 0s;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(194, 181, 178, 0.15) 0px 64px 64px 0px, rgba(194, 181, 178, 0.15) 0px 32px 32px 0px, rgba(194, 181, 178, 0.15) 0px 16px 16px 0px, rgba(194, 181, 178, 0.15) 0px 8px 8px 0px, rgba(194, 181, 178, 0.15) 0px 4px 4px 0px;
+  margin-bottom: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.profile-body .portfolio-grid .item .card-overlay {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  z-index: 20;
+  inset: 0px;
+  opacity: 1;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0s;
+  text-transform: capitalize;
+  font-family: "Oswald", sans-serif;
+}
+.profile-body .portfolio-grid .item .card-overlay:hover {
+  opacity: 0.8;
+}
+.profile-body .portfolio-grid .item img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.profile-body .portfolio-grid .item .description {
+  text-align: center;
+  padding: 8px;
+  color: #868686;
+  text-transform: capitalize;
+  font-family: "Anton", sans-serif;
+  font-size: 16px;
+  display: block;
+}
+.profile-body .portfolio-grid .item:link {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1080px) {
+  .profile-body .portfolio-grid .item {
+    width: 92%;
+  }
+  .profile-body .portfolio-grid .item .description {
+    display: none;
+  }
+  .profile-body .portfolio-grid .item:nth-child(1) {
+    grid-row: 1/span 2;
+  }
+  .profile-body .portfolio-grid .item:nth-child(3) {
+    grid-row: 1/span 2;
+  }
+  .profile-body .portfolio-grid .item:nth-child(7) {
+    grid-row: 3/span 13;
+    grid-column: 2/span 1;
+    margin-bottom: 0px;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-container .toggle-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: flex-end;
+  }
+  .footer-container .toggle-container div {
+    align-self: baseline;
+  }
+  .footer-container .toggle-container p {
+    align-self: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
